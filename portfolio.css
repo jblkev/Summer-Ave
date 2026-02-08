@@ -1,66 +1,66 @@
 /* ============================================================
    Summer Ave Studio — Portfolio Page
-   Editorial / Magazine Layout
+   Aesthetic: Burberry warmth + Foster & Partners editorial minimalism
    ============================================================ */
 
-/* --- Page Header --- */
 .portfolio-page {
-  background: #fff;
+  background: #FFFFFF;
 }
 
+/* --- Page Header: extreme white space --- */
 .port-header {
-  padding: 160px 0 80px;
+  padding: 180px 0 100px;
   background: #fff;
 }
 
 .port-header-title {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
   font-weight: 300;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   line-height: 1;
   color: var(--color-text);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .port-header-intro {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.95;
   color: var(--color-text-secondary);
-  max-width: 540px;
+  max-width: 480px;
 }
 
-/* --- Filter Bar --- */
+/* --- Filter Bar: minimal, sticky --- */
 .port-filter-bar {
   position: sticky;
-  top: 60px;
+  top: 56px;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
-  padding: 0;
 }
 
 .port-filter-bar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 56px;
+  min-height: 52px;
 }
 
 .port-filters {
   display: flex;
-  gap: 4px;
+  gap: 0;
 }
 
 .port-filter {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 400;
-  letter-spacing: 0.04em;
-  padding: 8px 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 20px;
   background: transparent;
   border: none;
   color: var(--color-text-muted);
@@ -73,9 +73,9 @@
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 18px;
-  right: 18px;
-  height: 1.5px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
   background: var(--color-text);
   transform: scaleX(0);
   transition: transform var(--transition-base);
@@ -95,76 +95,78 @@
 }
 
 .port-count {
-  font-size: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 300;
   color: var(--color-text-muted);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
-/* --- Main Content Area --- */
+/* --- Main Content: extreme vertical rhythm --- */
 .port-main {
-  padding: 80px 0 0;
+  padding: 100px 0 0;
 }
 
 .port-main .container {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 120px;
 }
 
-/* --- Shared Type Styles --- */
+/* --- Shared Editorial Typography --- */
 .port-type {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-honey);
 }
 
 .port-divider {
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   color: var(--color-border);
-  margin: 0 8px;
+  margin: 0 10px;
 }
 
 .port-location {
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
 .port-view {
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--color-text);
-  letter-spacing: 0.02em;
   transition: color var(--transition-base);
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .port-view:hover,
 a:hover .port-view {
-  color: var(--color-gold);
+  color: var(--color-honey);
 }
 
 /* --- Feature (Hero Project) --- */
 .port-feature {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(32px);
 }
 
 .port-feature.visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
 }
 
 .port-feature-link {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
-  gap: 64px;
+  gap: 80px;
   align-items: center;
 }
 
@@ -174,59 +176,61 @@ a:hover .port-view {
 }
 
 .port-feature-img .img-placeholder {
-  transition: transform 0.8s var(--ease-out);
+  transition: transform 0.9s var(--ease-out);
 }
 
 .port-feature-link:hover .port-feature-img .img-placeholder {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .port-feature-meta {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .port-feature-name {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 400;
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  font-weight: 300;
   line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--color-text);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .port-feature-desc {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 300;
-  line-height: 1.85;
+  line-height: 1.9;
   color: var(--color-text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .port-feature-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  padding-top: 28px;
+  padding-top: 32px;
   border-top: 1px solid var(--color-border-light);
 }
 
 .port-stat {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .port-stat-val {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: var(--color-text);
+  letter-spacing: -0.01em;
 }
 
 .port-stat-unit {
-  font-size: 0.68rem;
+  font-size: 0.6rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -235,18 +239,18 @@ a:hover .port-view {
 .port-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 56px;
 }
 
 .port-card {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(32px);
 }
 
 .port-card.visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
 }
 
 .port-card-link {
@@ -255,7 +259,7 @@ a:hover .port-view {
 
 .port-card-img {
   overflow: hidden;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .port-card-img-tall {
@@ -267,50 +271,52 @@ a:hover .port-view {
 }
 
 .port-card-img .img-placeholder {
-  transition: transform 0.7s var(--ease-out);
+  transition: transform 0.8s var(--ease-out);
 }
 
 .port-card-link:hover .port-card-img .img-placeholder {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .port-card-meta {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .port-card-name {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 300;
   line-height: 1.2;
+  letter-spacing: -0.01em;
   color: var(--color-text);
   margin-bottom: 8px;
 }
 
 .port-card-spec {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
+  font-weight: 300;
   color: var(--color-text-muted);
-  letter-spacing: 0.02em;
-  margin-bottom: 14px;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
 
 .port-card-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 300;
-  line-height: 1.75;
+  line-height: 1.8;
   color: var(--color-text-secondary);
 }
 
 /* --- Wide Editorial Banner --- */
 .port-editorial {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(32px);
 }
 
 .port-editorial.visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
 }
 
 .port-editorial-img {
@@ -320,7 +326,7 @@ a:hover .port-view {
 }
 
 .port-editorial-img .img-placeholder {
-  transition: transform 0.8s var(--ease-out);
+  transition: transform 0.9s var(--ease-out);
 }
 
 .port-editorial-link:hover .img-placeholder {
@@ -332,91 +338,94 @@ a:hover .port-view {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 48px;
-  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  padding: 56px;
+  background: linear-gradient(to top, rgba(27,27,27,0.65) 0%, transparent 100%);
   color: #fff;
 }
 
 .port-editorial-caption .port-type {
-  color: var(--color-gold-light);
+  color: var(--color-camel);
 }
 
 .port-editorial-caption .port-divider {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.2);
 }
 
 .port-editorial-caption .port-location {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.5);
 }
 
 .port-editorial-caption h3 {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 400;
-  margin-top: 8px;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 300;
+  margin-top: 10px;
   margin-bottom: 6px;
 }
 
 .port-editorial-caption p {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.6);
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.5);
 }
 
 /* --- Three-Column (Trio) --- */
 .port-trio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 48px;
 }
 
 .port-card-compact .port-card-img {
   aspect-ratio: 1 / 1;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .port-card-compact .port-card-name {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 /* --- Asymmetric Two-Column --- */
 .port-asym {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
+  gap: 56px;
   align-items: start;
 }
 
-/* --- Bottom CTA Section --- */
+/* --- Bottom CTA --- */
 .port-cta {
   text-align: center;
-  padding: 120px 0;
-  margin-top: 100px;
-  background: var(--color-bg);
+  padding: 140px 0;
+  margin-top: 120px;
+  background: var(--color-bg-warm);
 }
 
 .port-cta .section-label {
-  color: var(--color-gold);
+  color: var(--color-honey);
 }
 
 .port-cta-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 400;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 300;
   line-height: 1.2;
+  letter-spacing: -0.01em;
   color: var(--color-text);
-  margin-bottom: 16px;
-  max-width: 600px;
+  margin-bottom: 20px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .port-cta-text {
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--color-text-secondary);
-  max-width: 480px;
-  margin: 0 auto 36px;
+  max-width: 440px;
+  margin: 0 auto 40px;
 }
 
 /* ============================================================
@@ -424,17 +433,16 @@ a:hover .port-view {
    ============================================================ */
 @media (max-width: 1024px) {
   .port-header {
-    padding: 140px 0 64px;
+    padding: 160px 0 80px;
   }
 
   .port-feature-link {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 48px;
   }
 
   .port-feature-stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 
   .port-trio {
@@ -451,18 +459,16 @@ a:hover .port-view {
   }
 
   .port-main .container {
-    gap: 80px;
+    gap: 88px;
   }
 }
 
 /* ============================================================
-   RESPONSIVE — Mobile (iPhone-optimized luxury feel)
+   RESPONSIVE — Mobile
    ============================================================ */
 @media (max-width: 768px) {
-
-  /* --- Page Header: generous breathing room --- */
   .port-header {
-    padding: 130px 0 56px;
+    padding: 140px 0 64px;
   }
 
   .port-header .container {
@@ -470,45 +476,33 @@ a:hover .port-view {
   }
 
   .port-header-title {
-    font-size: 3.2rem;
-    letter-spacing: -0.03em;
-    margin-bottom: 24px;
+    font-size: 3rem;
+    margin-bottom: 28px;
   }
 
   .port-header-intro {
-    font-size: 1.02rem;
+    font-size: 0.95rem;
     line-height: 1.85;
     max-width: 100%;
   }
 
-  /* --- Filter Bar: horizontal scroll, no cramping --- */
-  .port-filter-bar {
-    top: 56px;
-  }
-
   .port-filter-bar .container {
-    flex-direction: row;
-    justify-content: space-between;
     padding: 0 28px;
   }
 
   .port-filters {
-    display: flex;
-    gap: 0;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     margin-right: 12px;
   }
 
-  .port-filters::-webkit-scrollbar {
-    display: none;
-  }
+  .port-filters::-webkit-scrollbar { display: none; }
 
   .port-filter {
     padding: 10px 16px;
     white-space: nowrap;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .port-count {
@@ -516,33 +510,25 @@ a:hover .port-view {
     flex-shrink: 0;
   }
 
-  /* --- Main grid: generous vertical rhythm --- */
   .port-main {
-    padding: 56px 0 0;
+    padding: 64px 0 0;
   }
 
   .port-main .container {
-    gap: 72px;
+    gap: 80px;
     padding: 0 28px;
   }
 
-  /* --- Feature project: stacked --- */
   .port-feature-link {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 36px;
   }
 
-  .port-feature-img {
-    aspect-ratio: 4 / 3;
-  }
-
-  .port-feature-name {
-    font-size: 1.8rem;
-  }
+  .port-feature-name { font-size: 1.7rem; }
 
   .port-feature-desc {
-    font-size: 0.92rem;
-    line-height: 1.8;
+    font-size: 0.88rem;
+    line-height: 1.85;
   }
 
   .port-feature-stats {
@@ -550,46 +536,23 @@ a:hover .port-view {
     gap: 20px;
   }
 
-  .port-stat-val {
-    font-size: 1.2rem;
-  }
+  .port-stat-val { font-size: 1.1rem; }
 
-  /* --- Two-column becomes single --- */
   .port-duo {
     grid-template-columns: 1fr;
-    gap: 56px;
+    gap: 64px;
   }
 
-  .port-card-img-tall {
-    aspect-ratio: 4 / 5;
-  }
+  .port-card-img-tall { aspect-ratio: 4 / 5; }
+  .port-card-name { font-size: 1.3rem; }
 
-  .port-card-name {
-    font-size: 1.35rem;
-  }
+  .port-editorial-img { aspect-ratio: 16 / 10; }
+  .port-editorial-caption { padding: 28px; }
+  .port-editorial-caption h3 { font-size: 1.3rem; }
 
-  .port-card-desc {
-    font-size: 0.88rem;
-    line-height: 1.8;
-  }
-
-  /* --- Editorial wide image --- */
-  .port-editorial-img {
-    aspect-ratio: 16 / 10;
-  }
-
-  .port-editorial-caption {
-    padding: 28px;
-  }
-
-  .port-editorial-caption h3 {
-    font-size: 1.4rem;
-  }
-
-  /* --- Three-column becomes single --- */
   .port-trio {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 56px;
   }
 
   .port-trio .port-card:last-child {
@@ -597,62 +560,34 @@ a:hover .port-view {
     max-width: 100%;
   }
 
-  .port-card-compact .port-card-img {
-    aspect-ratio: 4 / 3;
-  }
+  .port-card-compact .port-card-img { aspect-ratio: 4 / 3; }
 
-  /* --- Asymmetric becomes single --- */
   .port-asym {
     grid-template-columns: 1fr;
-    gap: 56px;
+    gap: 64px;
   }
 
-  .port-card-img-medium {
-    aspect-ratio: 4 / 3;
-  }
-
-  /* --- CTA Section --- */
   .port-cta {
-    padding: 80px 0;
-    margin-top: 72px;
+    padding: 88px 0;
+    margin-top: 80px;
   }
 
-  .port-cta .container {
-    padding: 0 28px;
-  }
-
-  .port-cta-title {
-    font-size: 1.6rem;
-  }
-
-  .port-cta-text {
-    font-size: 0.92rem;
-  }
+  .port-cta .container { padding: 0 28px; }
+  .port-cta-title { font-size: 1.5rem; }
+  .port-cta-text { font-size: 0.88rem; }
 }
 
-/* --- Small phones (iPhone SE, etc.) --- */
 @media (max-width: 375px) {
-  .port-header {
-    padding: 120px 0 48px;
-  }
+  .port-header { padding: 120px 0 48px; }
 
   .port-header .container,
   .port-main .container,
   .port-cta .container,
   .port-filter-bar .container {
-    padding: 0 20px;
+    padding: 0 22px;
   }
 
-  .port-header-title {
-    font-size: 2.6rem;
-  }
-
-  .port-feature-name {
-    font-size: 1.5rem;
-  }
-
-  .port-feature-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
+  .port-header-title { font-size: 2.4rem; }
+  .port-feature-name { font-size: 1.4rem; }
+  .port-feature-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
 }
