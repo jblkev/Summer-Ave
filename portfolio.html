@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Summer Ave Studio | Great Neck, NY</title>
+  <meta name="description" content="Explore our portfolio of luxury custom homes in Great Neck, Kings Point, and the North Shore. New construction, waterfront estates, and full renovations from $2M+.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="portfolio-page">
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-text">Summer Ave</span>
+        <span class="logo-sub">Studio</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Start a Project</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="port-header">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h1 class="port-header-title">Portfolio</h1>
+      <p class="port-header-intro">
+        A curated collection of residences across Great Neck, Kings Point,
+        and the North Shore &mdash; each one a singular response to place,
+        program, and the way a family wants to live.
+      </p>
+    </div>
+  </header>
+
+  <!-- Filter Bar -->
+  <div class="port-filter-bar">
+    <div class="container">
+      <div class="port-filters">
+        <button class="port-filter active" data-filter="all">All</button>
+        <button class="port-filter" data-filter="new">New Construction</button>
+        <button class="port-filter" data-filter="renovation">Renovation</button>
+        <button class="port-filter" data-filter="waterfront">Waterfront</button>
+        <button class="port-filter" data-filter="interior">Interior</button>
+      </div>
+      <p class="port-count"><span id="projectCount">8</span> Projects</p>
+    </div>
+  </div>
+
+  <!-- Editorial Grid -->
+  <main class="port-main">
+    <div class="container">
+
+      <!-- === Row 1: Hero Feature === -->
+      <article class="port-feature" data-category="new waterfront">
+        <a href="#" class="port-feature-link">
+          <div class="port-feature-img">
+            <div class="img-placeholder" style="background: linear-gradient(145deg, #C8BEAE 0%, #A89882 100%);">
+              <div class="placeholder-icon">&#8962;</div>
+              <span>Kings Point Waterfront &mdash; Exterior at Dusk</span>
+            </div>
+          </div>
+          <div class="port-feature-text">
+            <div class="port-feature-meta">
+              <span class="port-type">New Construction</span>
+              <span class="port-divider">/</span>
+              <span class="port-location">Kings Point</span>
+            </div>
+            <h2 class="port-feature-name">The Kings Point Residence</h2>
+            <p class="port-feature-desc">
+              A 7,200-square-foot contemporary home on the Long Island Sound. Floor-to-ceiling
+              glass wraps the principal rooms, framing panoramic water views from sunrise to
+              sunset. Winner of the 2024 AIA Long Island Residential Design Award.
+            </p>
+            <div class="port-feature-stats">
+              <div class="port-stat">
+                <span class="port-stat-val">7,200</span>
+                <span class="port-stat-unit">Square Feet</span>
+              </div>
+              <div class="port-stat">
+                <span class="port-stat-val">6</span>
+                <span class="port-stat-unit">Bedrooms</span>
+              </div>
+              <div class="port-stat">
+                <span class="port-stat-val">$3.8M</span>
+                <span class="port-stat-unit">Project Value</span>
+              </div>
+              <div class="port-stat">
+                <span class="port-stat-val">14</span>
+                <span class="port-stat-unit">Months</span>
+              </div>
+            </div>
+            <span class="port-view">View Case Study &rarr;</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- === Row 2: Two-Column === -->
+      <div class="port-duo">
+        <article class="port-card" data-category="new">
+          <a href="#" class="port-card-link">
+            <div class="port-card-img port-card-img-tall">
+              <div class="img-placeholder" style="background: linear-gradient(145deg, #D5CFC5 0%, #B8AFA1 100%);">
+                <div class="placeholder-icon">&#8962;</div>
+                <span>Arrandale &mdash; Front Elevation</span>
+              </div>
+            </div>
+            <div class="port-card-text">
+              <div class="port-card-meta">
+                <span class="port-type">New Construction</span>
+                <span class="port-divider">/</span>
+                <span class="port-location">Great Neck Estates</span>
+              </div>
+              <h3 class="port-card-name">Arrandale Colonial</h3>
+              <p class="port-card-spec">5,800 SF &middot; 5 Bed &middot; 5.5 Bath</p>
+              <p class="port-card-desc">
+                A neo-Georgian residence on a half-acre corner lot. Handmade brick,
+                limestone detailing, and a copper-clad conservatory anchor this home
+                in the tradition of Great Neck Estates.
+              </p>
+              <span class="port-view">View Project &rarr;</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="port-card" data-category="renovation">
+          <a href="#" class="port-card-link">
+            <div class="port-card-img port-card-img-tall">
+              <div class="img-placeholder" style="background: linear-gradient(145deg, #D0C8BA 0%, #BAB0A0 100%);">
+                <div class="placeholder-icon">&#8962;</div>
+                <span>Saddle Rock &mdash; Living Room</span>
+              </div>
+            </div>
+            <div class="port-card-text">
+              <div class="port-card-meta">
+                <span class="port-type">Full Renovation</span>
+                <span class="port-divider">/</span>
+                <span class="port-location">Saddle Rock</span>
+              </div>
+              <h3 class="port-card-name">Saddle Rock Modern</h3>
+              <p class="port-card-spec">4,500 SF &middot; 4 Bed &middot; 4 Bath</p>
+              <p class="port-card-desc">
+                A 1960s split-level transformed into a light-filled modern home.
+                The original roofline was preserved; everything else was reimagined
+                with white oak, Venetian plaster, and walls of glass.
+              </p>
+              <span class="port-view">View Project &rarr;</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <!-- === Row 3: Wide Editorial Image === -->
+      <article class="port-editorial" data-category="new waterfront">
+        <a href="#" class="port-editorial-link">
+          <div class="port-editorial-img">
+            <div class="img-placeholder" style="background: linear-gradient(145deg, #BFC8C0 0%, #9AABA0 100%);">
+              <div class="placeholder-icon">&#8962;</div>
+              <span>Bay Club Drive &mdash; Infinity Pool with Sound Views</span>
+            </div>
+            <div class="port-editorial-caption">
+              <div class="port-card-meta">
+                <span class="port-type">Waterfront</span>
+                <span class="port-divider">/</span>
+                <span class="port-location">Manhasset Bay</span>
+              </div>
+              <h3>Bay Club Drive</h3>
+              <p>8,400 SF &middot; 7 Bed &middot; Waterfront &middot; $4.2M</p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- === Row 4: Three-Column Magazine Grid === -->
+      <div class="port-trio">
+        <article class="port-card port-card-compact" data-category="new">
+          <a href="#" class="port-card-link">
+            <div class="port-card-img">
+              <div class="img-placeholder" style="background: linear-gradient(145deg, #D8D2C8 0%, #C2BAA9 100%);">
+                <div class="placeholder-icon">&#8962;</div>
+                <span>Estates Transitional</span>
+              </div>
+            </div>
+            <div class="port-card-text">
+              <div class="port-card-meta">
+                <span class="port-type">New Construction</span>
+              </div>
+              <h3 class="port-card-name">The Estates Transitional</h3>
+              <p class="port-card-spec">6,100 SF &middot; 5 Bed &middot; $2.9M</p>
+              <span class="port-view">View Project &rarr;</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="port-card port-card-compact" data-category="renovation waterfront">
+          <a href="#" class="port-card-link">
+            <div class="port-card-img">
+              <div class="img-placeholder" style="background: linear-gradient(145deg, #C5CCC5 0%, #A8B5A8 100%);">
+                <div class="placeholder-icon">&#8962;</div>
+                <span>Stepping Stone Lane</span>
+              </div>
+            </div>
+            <div class="port-card-text">
+              <div class="port-card-meta">
+                <span class="port-type">Renovation</span>
+              </div>
+              <h3 class="port-card-name">Stepping Stone Lane</h3>
+              <p class="port-card-spec">5,200 SF &middot; 5 Bed &middot; $3.1M</p>
+              <span class="port-view">View Project &rarr;</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="port-card port-card-compact" data-category="interior">
+          <a href="#" class="port-card-link">
+            <div class="port-card-img">
+              <div class="img-placeholder" style="background: linear-gradient(145deg, #DDD8CE 0%, #C8C0B2 100%);">
+                <div class="placeholder-icon">&#8962;</div>
+                <span>Windmill Lane Interior</span>
+              </div>
+            </div>
+            <div class="port-card-text">
+              <div class="port-card-meta">
+                <span class="port-type">Interior Design</span>
+              </div>
+              <h3 class="port-card-name">Windmill Lane Residence</h3>
+              <p class="port-card-spec">3,800 SF &middot; Full Interior &middot; $2.2M</p>
+              <span class="port-view">View Project &rarr;</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <!-- === Row 5: Asymmetric Two-Column === -->
+      <div class="port-asym">
+        <article class="port-card port-asym-wide" data-category="new">
+          <a href="#" class="port-card-link">
+            <div class="port-card-img port-card-img-medium">
+              <div class="img-placeholder" style="background: linear-gradient(145deg, #C8C2B5 0%, #AEA798 100%);">
+                <div class="placeholder-icon">&#8962;</div>
+                <span>North Drive &mdash; Kitchen Detail</span>
+              </div>
+            </div>
+            <div class="port-card-text">
+              <div class="port-card-meta">
+                <span class="port-type">New Construction</span>
+                <span class="port-divider">/</span>
+                <span class="port-location">Great Neck Plaza</span>
+              </div>
+              <h3 class="port-card-name">North Drive Contemporary</h3>
+              <p class="port-card-spec">5,400 SF &middot; 5 Bed &middot; 4.5 Bath &middot; $2.4M</p>
+              <p class="port-card-desc">
+                Clean-lined modernism softened with warm natural materials. A
+                double-height entry and floating staircase set the tone for
+                a home built around a central courtyard garden.
+              </p>
+              <span class="port-view">View Project &rarr;</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="port-card port-asym-narrow" data-category="interior renovation">
+          <a href="#" class="port-card-link">
+            <div class="port-card-img port-card-img-medium">
+              <div class="img-placeholder" style="background: linear-gradient(145deg, #D5D0C5 0%, #C0B8A8 100%);">
+                <div class="placeholder-icon">&#8962;</div>
+                <span>Grace Ave &mdash; Primary Suite</span>
+              </div>
+            </div>
+            <div class="port-card-text">
+              <div class="port-card-meta">
+                <span class="port-type">Renovation + Interior</span>
+                <span class="port-divider">/</span>
+                <span class="port-location">Kings Point</span>
+              </div>
+              <h3 class="port-card-name">Grace Avenue Revival</h3>
+              <p class="port-card-spec">4,800 SF &middot; 4 Bed &middot; $2.8M</p>
+              <span class="port-view">View Project &rarr;</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bottom CTA -->
+  <section class="port-cta">
+    <div class="container">
+      <p class="section-label">Your Vision, Our Craft</p>
+      <h2 class="port-cta-title">Ready to see your home in this collection?</h2>
+      <p class="port-cta-text">
+        Every project here started with a conversation. Tell us about your lot,
+        your ideas, or even just a feeling &mdash; and we'll show you what's possible.
+      </p>
+      <a href="index.html#contact" class="btn btn-primary">Schedule a Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-text">Summer Ave</span>
+            <span class="logo-sub">Studio</span>
+          </a>
+          <p>Luxury architecture and development on Long Island's Gold Coast.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="index.html#services">Custom Architecture</a></li>
+            <li><a href="index.html#services">Development</a></li>
+            <li><a href="index.html#services">Interior Design</a></li>
+            <li><a href="index.html#services">Renovation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Houzz</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Architectural Digest</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Summer Ave Studio. All rights reserved.</p>
+        <p>487 Middle Neck Road, Suite 204, Great Neck, NY 11023</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+/* ============================================================
+   Summer Ave Studio — Portfolio Page
+   Editorial / Magazine Layout
+   ============================================================ */
+
+/* --- Page Header --- */
+.portfolio-page {
+  background: #fff;
+}
+
+.port-header {
+  padding: 160px 0 80px;
+  background: #fff;
+}
+
+.port-header-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+.port-header-intro {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  max-width: 540px;
+}
+
+/* --- Filter Bar --- */
+.port-filter-bar {
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 0;
+}
+
+.port-filter-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+}
+
+.port-filters {
+  display: flex;
+  gap: 4px;
+}
+
+.port-filter {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  padding: 8px 18px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.port-filter::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 18px;
+  right: 18px;
+  height: 1.5px;
+  background: var(--color-text);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.port-filter:hover {
+  color: var(--color-text);
+}
+
+.port-filter.active {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.port-filter.active::after {
+  transform: scaleX(1);
+}
+
+.port-count {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* --- Main Content Area --- */
+.port-main {
+  padding: 80px 0 0;
+}
+
+.port-main .container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* --- Shared Type Styles --- */
+.port-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.port-divider {
+  font-size: 0.7rem;
+  color: var(--color-border);
+  margin: 0 8px;
+}
+
+.port-location {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.port-view {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  transition: color var(--transition-base);
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.port-view:hover,
+a:hover .port-view {
+  color: var(--color-gold);
+}
+
+/* --- Feature (Hero Project) --- */
+.port-feature {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.port-feature.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+
+.port-feature-link {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.port-feature-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.port-feature-img .img-placeholder {
+  transition: transform 0.8s var(--ease-out);
+}
+
+.port-feature-link:hover .port-feature-img .img-placeholder {
+  transform: scale(1.03);
+}
+
+.port-feature-meta {
+  margin-bottom: 16px;
+}
+
+.port-feature-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.port-feature-desc {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+.port-feature-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.port-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.port-stat-val {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.port-stat-unit {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* --- Two-Column (Duo) --- */
+.port-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.port-card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.port-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.port-card-link {
+  display: block;
+}
+
+.port-card-img {
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.port-card-img-tall {
+  aspect-ratio: 3 / 4;
+}
+
+.port-card-img-medium {
+  aspect-ratio: 4 / 3;
+}
+
+.port-card-img .img-placeholder {
+  transition: transform 0.7s var(--ease-out);
+}
+
+.port-card-link:hover .port-card-img .img-placeholder {
+  transform: scale(1.03);
+}
+
+.port-card-meta {
+  margin-bottom: 10px;
+}
+
+.port-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.port-card-spec {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.port-card-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+/* --- Wide Editorial Banner --- */
+.port-editorial {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.port-editorial.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+
+.port-editorial-img {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+}
+
+.port-editorial-img .img-placeholder {
+  transition: transform 0.8s var(--ease-out);
+}
+
+.port-editorial-link:hover .img-placeholder {
+  transform: scale(1.02);
+}
+
+.port-editorial-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 48px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  color: #fff;
+}
+
+.port-editorial-caption .port-type {
+  color: var(--color-gold-light);
+}
+
+.port-editorial-caption .port-divider {
+  color: rgba(255,255,255,0.3);
+}
+
+.port-editorial-caption .port-location {
+  color: rgba(255,255,255,0.6);
+}
+
+.port-editorial-caption h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.port-editorial-caption p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* --- Three-Column (Trio) --- */
+.port-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.port-card-compact .port-card-img {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 24px;
+}
+
+.port-card-compact .port-card-name {
+  font-size: 1.25rem;
+}
+
+/* --- Asymmetric Two-Column --- */
+.port-asym {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* --- Bottom CTA Section --- */
+.port-cta {
+  text-align: center;
+  padding: 120px 0;
+  margin-top: 100px;
+  background: var(--color-bg);
+}
+
+.port-cta .section-label {
+  color: var(--color-gold);
+}
+
+.port-cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.port-cta-text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  max-width: 480px;
+  margin: 0 auto 36px;
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet
+   ============================================================ */
+@media (max-width: 1024px) {
+  .port-header {
+    padding: 140px 0 64px;
+  }
+
+  .port-feature-link {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .port-feature-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .port-trio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .port-trio .port-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+  }
+
+  .port-asym {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .port-main .container {
+    gap: 80px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile (iPhone-optimized luxury feel)
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* --- Page Header: generous breathing room --- */
+  .port-header {
+    padding: 130px 0 56px;
+  }
+
+  .port-header .container {
+    padding: 0 28px;
+  }
+
+  .port-header-title {
+    font-size: 3.2rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+
+  .port-header-intro {
+    font-size: 1.02rem;
+    line-height: 1.85;
+    max-width: 100%;
+  }
+
+  /* --- Filter Bar: horizontal scroll, no cramping --- */
+  .port-filter-bar {
+    top: 56px;
+  }
+
+  .port-filter-bar .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 28px;
+  }
+
+  .port-filters {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-right: 12px;
+  }
+
+  .port-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .port-filter {
+    padding: 10px 16px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+
+  .port-count {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* --- Main grid: generous vertical rhythm --- */
+  .port-main {
+    padding: 56px 0 0;
+  }
+
+  .port-main .container {
+    gap: 72px;
+    padding: 0 28px;
+  }
+
+  /* --- Feature project: stacked --- */
+  .port-feature-link {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .port-feature-img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .port-feature-name {
+    font-size: 1.8rem;
+  }
+
+  .port-feature-desc {
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+
+  .port-feature-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .port-stat-val {
+    font-size: 1.2rem;
+  }
+
+  /* --- Two-column becomes single --- */
+  .port-duo {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .port-card-img-tall {
+    aspect-ratio: 4 / 5;
+  }
+
+  .port-card-name {
+    font-size: 1.35rem;
+  }
+
+  .port-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  /* --- Editorial wide image --- */
+  .port-editorial-img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .port-editorial-caption {
+    padding: 28px;
+  }
+
+  .port-editorial-caption h3 {
+    font-size: 1.4rem;
+  }
+
+  /* --- Three-column becomes single --- */
+  .port-trio {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .port-trio .port-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .port-card-compact .port-card-img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* --- Asymmetric becomes single --- */
+  .port-asym {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .port-card-img-medium {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* --- CTA Section --- */
+  .port-cta {
+    padding: 80px 0;
+    margin-top: 72px;
+  }
+
+  .port-cta .container {
+    padding: 0 28px;
+  }
+
+  .port-cta-title {
+    font-size: 1.6rem;
+  }
+
+  .port-cta-text {
+    font-size: 0.92rem;
+  }
+}
+
+/* --- Small phones (iPhone SE, etc.) --- */
+@media (max-width: 375px) {
+  .port-header {
+    padding: 120px 0 48px;
+  }
+
+  .port-header .container,
+  .port-main .container,
+  .port-cta .container,
+  .port-filter-bar .container {
+    padding: 0 20px;
+  }
+
+  .port-header-title {
+    font-size: 2.6rem;
+  }
+
+  .port-feature-name {
+    font-size: 1.5rem;
+  }
+
+  .port-feature-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
