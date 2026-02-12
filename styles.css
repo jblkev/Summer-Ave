@@ -476,6 +476,14 @@ img {
   left: 0;
   width: 78%;
   height: 72%;
+  overflow: hidden;
+}
+
+.about-img-1 img,
+.about-img-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-img-2 {
@@ -485,6 +493,7 @@ img {
   width: 50%;
   height: 42%;
   border: 5px solid var(--color-bg);
+  overflow: hidden;
 }
 
 .about-text {
@@ -593,7 +602,18 @@ img {
   transition: transform var(--transition-slow);
 }
 
+.project-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
 .project-card:hover .project-img {
+  transform: scale(1.03);
+}
+
+.project-card:hover .project-img-real {
   transform: scale(1.03);
 }
 
@@ -898,6 +918,15 @@ img {
   margin-bottom: 24px;
 }
 
+.testimonial-heading {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
 .testimonial-card blockquote {
   font-family: var(--font-serif);
   font-size: 1.05rem;
@@ -971,6 +1000,65 @@ img {
   line-height: 1.7;
 }
 
+/* Team — Single Founder Layout */
+.team-single {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.team-credentials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--color-border-light);
+}
+
+.credential {
+  padding: 36px;
+  background: var(--color-bg-warm);
+}
+
+.credential h4 {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.credential p {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+.team-philosophy {
+  padding-top: 8px;
+}
+
+.team-quote {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 28px;
+}
+
+.team-quote-small {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+}
+
 /* ============================================================
    NEIGHBORHOOD
    ============================================================ */
@@ -1024,6 +1112,20 @@ img {
 
 .neighborhood-img {
   height: 520px;
+}
+
+.neighborhood-image {
+  overflow: hidden;
+}
+
+.neighborhood-img-real {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.feature-image {
+  overflow: hidden;
 }
 
 /* ============================================================
@@ -1282,8 +1384,17 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .team-single {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   .feature-strip-inner {
     grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    min-height: 300px;
   }
 
   .feature-img {
@@ -1532,7 +1643,25 @@ img {
 
   .member-img { height: 380px; }
 
+  .team-single {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .team-credentials {
+    grid-template-columns: 1fr;
+  }
+
+  .credential {
+    padding: 28px;
+  }
+
+  .team-quote {
+    font-size: 1.15rem;
+  }
+
   /* ---- Neighborhood ---- */
+  .neighborhood-img-real { height: 300px; }
   .neighborhood-highlights {
     grid-template-columns: 1fr 1fr;
   }
